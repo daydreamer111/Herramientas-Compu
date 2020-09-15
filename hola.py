@@ -3,4 +3,6 @@ import numpy as np
 
 #img = 
 
-prit("HELLO WORLD")
+print("HELLO WORLD")
+n = input()
+print(n*2)
