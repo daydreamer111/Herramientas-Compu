@@ -12,23 +12,21 @@ image_copy = image.copy()
 print(image)
 count = 0
 
-for i in range(0, image.shape[0]):
-     if i%3 == 2:
-          image[i] = image[i]*-1
-     elif i%3 == 1:
-          image[i] = image[i]*0
-
 for i in range(0, image.shape[0]-3, 3):
-     for j in range(0, image.shape[1]):
-          if count == 3:
-              count = 0
-              sum = image[i][j] + image[i][j-1] + image[i][j-2]
-              sum += image[i+1][j] + image[i+1][j-1] + image[i+1][j-2]
-              sum += image[i+2][j] + image[i+2][j-1] + image[i+2][j-2]
-              image_copy[i+1][j-1] = sum
+     image[i+1] = image[i+1]*-1
+     image[i+2] = image[i+2]*0
+
+#for i in range(0, image.shape[0]-3, 3):
+#     for j in range(0, image.shape[1]):
+#          if count == 3:
+#              count = 0
+#              sum = image[i][j] + image[i][j-1] + image[i][j-2]
+#              sum += image[i+1][j] + image[i+1][j-1] + image[i+1][j-2]
+#              sum += image[i+2][j] + image[i+2][j-1] + image[i+2][j-2]
+#              image[i+1][j-1] = sum
 
 while True:
-    cv2.imshow("Output", image_copy)
+    cv2.imshow("Output", image)
     cv2.waitKey(10)
 
 cv2.destroyAllWindows()

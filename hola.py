@@ -1,7 +1,7 @@
 import cv2
 import numpy as np
 
-img = "/home/pedros/Documents/Jackie/ulises.jpeg"
+img = "/home/pedros/Documents/Jackie/leo.jpeg"
 image = cv2.imread(img)
 #image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 image_copy = image.copy()
